@@ -1,0 +1,85 @@
+@import 'src/assets/vars.scss';
+
+form {
+  color: $suave-grey;
+  font-weight: 500;
+  max-width: 80%;
+  margin: 0 auto;
+  border: 2px solid $suave-grey;
+  border-radius: 8px;
+  padding: .8em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .title-form {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+  }
+
+  .periodo {
+    display: flex;
+    gap: .3em;
+    border-top: 1px solid $suave-grey;
+    padding-top: .6em;
+
+    .descricao-periodo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  //Tentei usar last-child e nth:last-child mas não funcionou
+  .periodo-noite {
+    border-bottom: 1px solid $suave-grey;
+    padding-bottom: .6em;
+  }
+
+  .escolher-fechadas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .input-escolher-fechadas {
+      display: flex;
+      align-items: center;
+      gap: .5em;
+    }
+
+    #resultados {
+      font-weight: bold;
+      color: black;
+    }
+  }
+
+  .acoes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+
+    button {
+      padding: 0.875em;
+      width: 20em;
+      border-radius: .4em;
+      cursor: pointer;
+    }
+
+    #btn-buscar {
+      border: 0;
+      border-style: none;
+      background-color: $yellow;
+      font-weight: bold;
+    }
+
+    #btn-limpar {
+      border: 1.2px solid $suave-grey;
+      background-color: #FFFFFF;
+      font-weight: bold;
+    }
+  }
+}
+

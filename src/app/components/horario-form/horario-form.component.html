@@ -1,0 +1,40 @@
+<form>
+  <div class="title-form">
+    <img src="assets/images/png/icon-hour.png" alt="reloginho" width="22">
+    <span>Horário</span>
+  </div>
+  <h3>Qual período você quer treinar?</h3>
+  <div class="periodo">
+    <input type="radio" name="periodo" value="M" [(ngModel)]="periodoEscolhido"/>
+    <div class="descricao-periodo">
+      <span>Manhã</span>
+      <span>06:00 às 12:00</span>
+    </div>
+  </div>
+  <div class="periodo">
+    <input type="radio" name="periodo" value="T" [(ngModel)]="periodoEscolhido"/>
+    <div class="descricao-periodo">
+      <span>Tarde</span>
+      <span>12:01 às 18:00</span>
+    </div>
+  </div>
+  <div class="periodo periodo-noite">
+    <input type="radio" name="periodo" value="N" [(ngModel)]="periodoEscolhido"/>
+    <div class="descricao-periodo">
+      <span>Noite</span>
+      <span>18:01 às 23:00</span>
+    </div>
+  </div>
+  <div class="escolher-fechadas">
+    <div class="input-escolher-fechadas">
+      <input type="checkbox" name="mostrar-fechadas" id="mostrar-fechadas"
+             [(ngModel)]="mostrarUnidadesFechadas">
+      <label for="mostrar-fechadas">Exibir unidades fechadas</label>
+    </div>
+    <p>Resultados encontrados: <span id="resultados">{{ resultados.length }}</span></p>
+  </div>
+  <div class="acoes">
+    <button type="button" id="btn-buscar">ENCONTRAR UNIDADE</button>
+    <button type="button" id="btn-limpar" (click)="limparForm()">LIMPAR</button>
+  </div>
+</form>
