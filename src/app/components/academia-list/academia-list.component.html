@@ -1,4 +1,4 @@
-<div class="results-container" *ngIf="resultados.length > 0">
+<div class="results-container">
   <div class="status-container">
     <div class="status-description">
       <p>Máscara</p>
@@ -61,6 +61,8 @@
     </div>
   </div>
   <div class="academias-container">
-    <h1>Olá, Mundo!</h1>
+    <div class="academia-card" *ngFor="let location of locations">
+      <h3>{{ location.title }}</h3>
+    </div>
   </div>
 </div>

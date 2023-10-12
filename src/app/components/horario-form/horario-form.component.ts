@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IUnidade} from "../../models/IUnidade";
+import {AcademiaService} from "../../services/academia.service";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-horario-form',
@@ -6,18 +9,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./horario-form.component.scss']
 })
 export class HorarioFormComponent implements OnInit {
-  periodoEscolhido = '';
-  mostrarUnidadesFechadas = false;
-  resultados = [];
+  @Input() resultadosEncontrados!: number;
+  @Output() buscarAcademias = new EventEmitter<{periodo: string, exibirFechadas: boolean}>();
+  @Output() limparForm = new EventEmitter();
+  form!: FormGroup;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private formBuilder: FormBuilder) {
   }
 
- limparForm() {
-    this.periodoEscolhido = '';
-    this.mostrarUnidadesFechadas = false;
-    this.resultados = [];
- }
+  ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      periodo: '',
+      exibirFechadas: false
+    });
+  }
+
+  emitirBuscarAcademias() {
+    this.buscarAcademias.emit(this.form.value);
+  }
+
+  emitirLimparForm() {
+    this.form.reset();
+    this.limparForm.emit();
+  }
 }

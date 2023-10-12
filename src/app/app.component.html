@@ -1,2 +1,5 @@
 <app-header></app-header>
-<app-horario-form></app-horario-form>
+<app-horario-form [resultadosEncontrados]="resultadosEncontrados"
+                  (buscarAcademias)="buscarAcademias($event)"
+                  (limparForm)="limpar()"></app-horario-form>
+<app-academia-list *ngIf="unidade" [unidade]="unidade"></app-academia-list>
