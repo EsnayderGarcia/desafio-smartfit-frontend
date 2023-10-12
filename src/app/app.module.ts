@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HorarioFormComponent } from './components/horario-form/horario-form.component';
 import {FormsModule} from "@angular/forms";
+import { AcademiaListComponent } from './components/academia-list/academia-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HorarioFormComponent,
+    AcademiaListComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,48 @@
+@import 'src/assets/vars.scss';
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 80%;
+  margin: 0 auto 1em;
+
+  .status-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: .8em;
+    border: 2px solid $suave-grey;
+    background-color: $fundo-grey;
+
+    .status-description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .8em;
+
+      > p {
+        font-weight: bold;
+      }
+
+      .status {
+        display: flex;
+        gap: .8em;
+
+        .status-details {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+            font-size: .8em;
+          }
+
+          img {
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+}

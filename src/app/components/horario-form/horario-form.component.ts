@@ -18,5 +18,6 @@ export class HorarioFormComponent implements OnInit {
  limparForm() {
     this.periodoEscolhido = '';
     this.mostrarUnidadesFechadas = false;
+    this.resultados = [];
  }
 }

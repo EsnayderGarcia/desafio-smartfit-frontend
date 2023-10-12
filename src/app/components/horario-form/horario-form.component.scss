@@ -11,6 +11,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  margin-bottom: 1em;
 
   .title-form {
     display: flex;
@@ -40,6 +41,7 @@ form {
   .escolher-fechadas {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     .input-escolher-fechadas {
