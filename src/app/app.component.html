@@ -2,4 +2,4 @@
 <app-horario-form [resultadosEncontrados]="resultadosEncontrados"
                   (buscarAcademias)="buscarAcademias($event)"
                   (limparForm)="limpar()"></app-horario-form>
-<app-academia-list *ngIf="unidade" [unidade]="unidade"></app-academia-list>
+<app-academia-list *ngIf="unidade" [locations]="unidade.locations"></app-academia-list>

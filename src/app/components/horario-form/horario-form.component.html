@@ -5,21 +5,36 @@
   </div>
   <h3>Qual período você quer treinar?</h3>
   <div class="periodo">
-    <input type="radio" id="periodo-manha" value="M" name="periodo" formControlName="periodo"/>
+    <input type="radio"
+           id="periodo-manha"
+           value="M"
+           name="periodo"
+           formControlName="periodo"
+    />
     <div class="descricao-periodo">
       <label for="periodo-manha">Manhã</label>
       <span>06:00 às 12:00</span>
     </div>
   </div>
   <div class="periodo">
-    <input type="radio" value="T" id="periodo-tarde" name="periodo" formControlName="periodo"/>
+    <input type="radio"
+           value="T"
+           id="periodo-tarde"
+           name="periodo"
+           formControlName="periodo"
+    />
     <div class="descricao-periodo">
       <label for="periodo-tarde">Tarde</label>
       <span>12:01 às 18:00</span>
     </div>
   </div>
   <div class="periodo periodo-noite">
-    <input type="radio" id="periodo-noite" value="N" name="periodo" formControlName="periodo"/>
+    <input type="radio"
+           id="periodo-noite"
+           value="N"
+           name="periodo"
+           formControlName="periodo"
+    />
     <div class="descricao-periodo">
       <label for="periodo-noite">Noite</label>
       <span>18:01 às 23:00</span>
@@ -27,8 +42,11 @@
   </div>
   <div class="escolher-fechadas">
     <div class="input-escolher-fechadas">
-      <input type="checkbox" name="exibir-fechadas" id="exibir-fechadas"
-             formControlName="exibirFechadas">
+      <input type="checkbox"
+             name="exibir-fechadas"
+             id="exibir-fechadas"
+             formControlName="exibirFechadas"
+      >
       <label for="exibir-fechadas">Exibir unidades fechadas</label>
     </div>
     <p>Resultados encontrados: <span id="resultados">{{ resultadosEncontrados }}</span></p>

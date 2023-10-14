@@ -2,6 +2,7 @@ export interface IUnidade {
   current_country_id: string,
   locations: ILocation[],
   wp_total: number,
+  total: number,
   success: boolean
 }
 

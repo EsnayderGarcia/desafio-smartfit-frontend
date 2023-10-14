@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
   buscarAcademias(value: {periodo: string, exibirFechadas: boolean}) {
     this.academiaService.buscarAcademias().subscribe(result => {
       this.unidade = result;
-      this.resultadosEncontrados = this.unidade.wp_total;
+      this.resultadosEncontrados = this.unidade.total;
     });
   }
 

@@ -7,12 +7,10 @@ import {ILocation, IUnidade} from "../../models/IUnidade";
   styleUrls: ['./academia-list.component.scss']
 })
 export class AcademiaListComponent implements OnInit {
-  @Input() unidade!: IUnidade | null;
-  locations: ILocation[] | undefined;
+  @Input() locations!: ILocation[];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.locations = this.unidade?.locations;
   }
 }
