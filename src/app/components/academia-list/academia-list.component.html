@@ -36,7 +36,7 @@
           <p>Parcial</p>
         </div>
         <div class="status-details">
-          <img src="assets/images/png/forbidden-fountain.png"/>
+          <img src="assets/images/png/not_allowed-fountain.png"/>
           <p>Proibido</p>
         </div>
       </div>
@@ -46,7 +46,7 @@
       <p>Vestiários</p>
       <div class="status">
         <div class="status-details">
-          <img src="assets/images/png/required-lockerroom.png"/>
+          <img src="assets/images/png/allowed-lockerroom.png"/>
           <p>Liberado</p>
         </div>
         <div class="status-details">
@@ -54,15 +54,31 @@
           <p>Parcial</p>
         </div>
         <div class="status-details">
-          <img src="assets/images/png/forbidden-lockerroom.png"/>
+          <img src="assets/images/png/closed-lockerroom.png"/>
           <p>Proibido</p>
         </div>
       </div>
     </div>
   </div>
+
   <div class="card-list">
     <div class="card" *ngFor="let location of locations">
+      <span [ngClass]="{'closed': !location.opened}">{{ location.opened ? 'Aberto' : 'Fechado' }}</span>
       <h3>{{ location.title }}</h3>
+      <p [innerHTML]="location.content"></p>
+      <div *ngIf="location.schedules" class="divider"></div>
+      <div class="icons">
+        <img *ngIf="location.mask" [src]="'/assets/images/png/' + location.mask + '-mask.png'"/>
+        <img *ngIf="location.towel" [src]="'/assets/images/png/' + location.towel + '-towel.png'"/>
+        <img  *ngIf="location.fountain" [src]="'/assets/images/png/' + location.fountain + '-fountain.png'"/>
+        <img *ngIf="location.locker_room" [src]="'/assets/images/png/' + location.locker_room + '-lockerroom.png'"/>
+      </div>
+      <ul>
+        <li *ngFor="let schedule of location.schedules">
+          <p class="weekdays">{{ schedule.weekdays }}</p>
+          <p class="hour">{{ schedule.hour }}</p>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

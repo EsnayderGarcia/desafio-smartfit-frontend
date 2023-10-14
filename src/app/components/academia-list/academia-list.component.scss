@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto 1em;
 
   .status-container {
@@ -46,5 +46,71 @@
     }
   }
 
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .9em;
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: .8em;
+      border: 2px solid $suave-grey;
+      background-color: $fundo-grey;
+      height: 450px;
+      width: 250px;
+      padding: 8px;
 
+      span {
+        color: $green;
+        font-weight: bold;
+      }
+
+      .closed {
+        color: $red;
+      }
+
+      .divider {
+        height: .8px;
+        background-color: grey;
+      }
+
+      .icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5em;
+        justify-content: space-between;
+        img {
+          width: 50px;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        width: 100%;
+
+        li {
+          display: flex;
+          flex-direction: column;
+
+          .weekdays {
+            font-size: 1em;
+            font-weight: bold;
+          }
+
+          .hour {
+            font-size: .9em;
+          }
+        }
+      }
+
+      @media (max-width: 450px) {
+        width: 290px;
+      }
+    }
+  }
 }
+
+

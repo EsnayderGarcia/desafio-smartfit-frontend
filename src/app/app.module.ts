@@ -8,6 +8,7 @@ import { HorarioFormComponent } from './components/horario-form/horario-form.com
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AcademiaListComponent } from './components/academia-list/academia-list.component';
 import {HttpClientModule} from "@angular/common/http";
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {HttpClientModule} from "@angular/common/http";
     HeaderComponent,
     HorarioFormComponent,
     AcademiaListComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
