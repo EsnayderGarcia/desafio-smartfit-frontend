@@ -4,14 +4,13 @@ form {
   color: $suave-grey;
   font-weight: 500;
   max-width: 70%;
-  margin: 0 auto;
   border: 2px solid $suave-grey;
   border-radius: 8px;
   padding: .8em;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  margin-bottom: 1em;
+  margin: 0 auto 1em;
 
   .title-form {
     display: flex;
@@ -71,8 +70,7 @@ form {
     }
 
     #btn-buscar {
-      border: 0;
-      border-style: none;
+      border: 0 none;
       background-color: $yellow;
       font-weight: bold;
     }

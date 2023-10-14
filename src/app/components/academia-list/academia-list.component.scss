@@ -13,6 +13,7 @@
     flex-wrap: wrap;
     padding: .8em;
     border: 2px solid $suave-grey;
+    border-radius: 8px;
     background-color: $fundo-grey;
 
     .status-description {
@@ -56,6 +57,7 @@
       flex-direction: column;
       gap: .8em;
       border: 2px solid $suave-grey;
+      border-radius: 8px;
       background-color: $fundo-grey;
       height: 450px;
       width: 250px;
